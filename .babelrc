@@ -1,0 +1,32 @@
+{
+    "presets": [
+        "stage-0",
+        [
+            "env",
+            {
+                "modules": false,
+                "targets": {
+                    "browsers": [
+                        "last 4 versions"
+                    ]
+                },
+                "useBuiltIns": true
+            }
+        ]
+    ],
+    "plugins": [
+        [
+            "transform-react-jsx",
+            {
+                "pragma": "h"
+            }
+        ],
+        [
+            "transform-runtime",
+            {
+                "polyfill": true,
+                "regenerator": true
+            }
+        ]
+    ]
+}
