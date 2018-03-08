@@ -41,7 +41,7 @@ module.exports = {
         test: /\.scss$/,
         use: [
           'style-loader',
-          'css-loader?modules=true&localIdentName=[path][name]__[local]--[hash:base64:5]&minimize: true',
+          'css-loader?modules=true&localIdentName=[local]--[hash:base64:5]&minimize: true',
           'postcss-loader',
           'sass-loader'
         ]
@@ -78,6 +78,7 @@ module.exports = {
     modules: [
       APP_DIR + '/shared-assets/style',
       APP_DIR + '/shared-assets/scripts',
+      APP_DIR + '/shared-assets/img',
       'node_modules'
     ]
   },
