@@ -1,11 +1,19 @@
-import {h} from 'preact'
+import { h } from 'preact'
 
-// Global CSS custom properties
+import RegionSidebar from './components/region-sidebar'
+import RegionContent from './components/region-content'
+
+// Global style and CSS custom properties
+import 'reset.scss'
 import 'normalize.scss'
 import 'utils.scss'
+import style from './styles.scss'
 
 export default function App () {
   return (
-    <div>Hello linksh</div>
+    <div id={style.appWrapper} class='flex'>
+      <RegionSidebar />
+      <RegionContent />
+    </div>
   )
 }
