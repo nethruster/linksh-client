@@ -283,4 +283,12 @@
         display: list-item;
     }
 
+    path { fill: currentColor; }
+
+    a {
+        color: #00b0f4;
+        cursor: pointer;
+        text-decoration: none;
+        transition: opacity .5s,color .5s;
+    }
 }
