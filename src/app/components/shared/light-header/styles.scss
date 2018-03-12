@@ -4,9 +4,19 @@
         font-weight: bold;
         text-transform: uppercase;
 
-        color: #B9BBBE;
+        color: var(--light-title-color);
 
-        padding-top: 0;
         padding: 6px 10px;
+    }
+
+    .darker {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: .5px;
+
+        color: var(--light-title-color-darker);
+        
+        padding: 0;
     }
 }

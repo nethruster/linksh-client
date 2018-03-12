@@ -1,8 +1,8 @@
 :local {
     .separator {
         height: 1px;
-        margin: 16px 10px;
+        margin: calc(var(--base-pm) * 2) var(--base-pm);
 
-        background-color: hsla(216,4%,74%,.3);
+        background-color: var(--separator-color);
     }
 }

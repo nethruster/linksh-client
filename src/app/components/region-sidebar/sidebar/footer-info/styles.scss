@@ -1,29 +1,22 @@
 :local {
     .footerInfoWrapper {
-        margin: 0 10px;
+        margin: 0 var(--base-pm);
 
         p {
             padding: 6px 10px;
 
             &:not(:first-child) {
-                padding-top: 12px;
-                padding-bottom: 12px;
+                padding-top: calc(var(--base-pm) * 1.5);
+                padding-bottom: calc(var(--base-pm) * 1.5);
             }
 
-            color: #4F545C;
             opacity: .8;
 
             font-weight: 400;
             font-size: 14px;
         }
 
-        a {
-            color: #26a599;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+        a { color: var(--neth-brand-color); }
 
         
     }
@@ -32,12 +25,10 @@
         width: 16px;
         height: auto;
 
-        color: #b9bbbe;
+        color: var(--light-title-color);
 
         vertical-align: middle;
 
-        &:hover {
-            color: rgb(240, 71, 71);
-        }
+        &:hover { color: var(--heart-red); }
     }
 }

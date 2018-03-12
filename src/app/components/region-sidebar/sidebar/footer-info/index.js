@@ -21,7 +21,7 @@ export default function FooterInfo () {
       <div class='flex flex-cross-center'>
         <a href='https://twitter.com/nethruster' target='_blank' rel='noopener'><IconButton icon='twitter' /></a>
         <a href='https://github.com/nethruster' target='_blank' rel='noopener'><IconButton icon='github' /></a>
-        <a href='https://nethruster.com' target='_blank' rel='noopener'><IconButton icon='web' /></a>
+        {/* <a href='https://nethruster.com' target='_blank' rel='noopener'><IconButton icon='web' /></a> */}
       </div>
     </div>
   )

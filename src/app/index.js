@@ -7,6 +7,7 @@ import RegionContent from './components/region-content'
 import 'reset.scss'
 import 'normalize.scss'
 import 'utils.scss'
+import 'vars.scss'
 import style from './styles.scss'
 
 export default function App () {

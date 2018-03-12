@@ -1,7 +1,7 @@
 :local {
     .sidebar {
-        width: 218px;
+        width: 250px;
 
-        padding: 60px 8px 60px 20px;        
+        padding: calc(var(--base-pm) * 8) var(--base-pm) calc(var(--base-pm) * 8) calc(var(--base-pm) * 3);        
     }
 }
