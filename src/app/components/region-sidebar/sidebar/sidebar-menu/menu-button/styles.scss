@@ -2,39 +2,36 @@
     .buttonWrapper {
         width: 100%;
 
-        
-        border-radius: 3px;
         margin-bottom: 2px;
         padding: 6px 10px;
-        padding-top: 6px;
+
+        border-radius: 3px;
 
         text-align: left;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 500;
         line-height: 20px;
 
         cursor: pointer;
 
-        &:hover {
-            background-color: rgba(79,84,92,.1);
-            color: #4f545c;
-        }
+        &:hover { background-color: var(--menu-button-hover); }
 
         &.active {
-            background-color: #366ED1;
-            color: white;
+            background-image: var(--accent-background);
+            color: var(--accent-content-color);
         }
 
         button {
             -webkit-appearance: none;
             
-             background:transparent;
+            background:transparent;
             border: none;
            
             color: inherit;
             outline: none;
             font-weight: inherit;
             font-size: inherit;
+            
             cursor: inherit;
         }
     }

@@ -1,0 +1,11 @@
+:local {
+    .contentColumn {
+        position: relative;
+        max-width: var(--content-max-width);
+        width: 100%;
+        min-height: 100%;
+        
+        padding: calc(var(--base-pm) * 8) calc(var(--base-pm) * 5) calc(var(--base-pm) * 10);
+        
+    }
+}

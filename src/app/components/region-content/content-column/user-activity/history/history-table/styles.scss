@@ -1,0 +1,21 @@
+:local {
+    .table {
+        margin-top: var(--base-pm);
+        padding: var(--base-pm);
+    }
+
+    .tableHeaderList {
+        display: grid;
+        grid-template-columns: var(--link-list-grid-column-template);
+        grid-template-rows: var(--link-list-grid-row-template);
+        grid-column-gap: var(--link-list-grid-column-gap);
+        align-items: center;
+
+        padding: calc(var(--base-pm) * 2) 0;
+
+        font-size: 14px;
+
+        color: var(--light-title-color);
+        border-bottom: 1px solid var(--separator-color);
+    }
+}

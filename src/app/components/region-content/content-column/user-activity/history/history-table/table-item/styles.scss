@@ -1,0 +1,27 @@
+:local {
+    .tableItem {
+        display: grid;
+        grid-template-columns: 1fr 100px 150px 55px;
+        grid-template-rows: 15px;
+        grid-column-gap: var(--base-pm);
+        max-width: 100%;
+
+        padding: 16px 0;
+
+        font-size: 14px;        
+
+        p,
+        a {
+            height: 100%;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            align-items: center;
+        }
+
+        .tableItem, 
+        p,
+        a,
+        li { overflow: hidden; }
+    }
+}
