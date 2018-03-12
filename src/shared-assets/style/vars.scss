@@ -1,0 +1,29 @@
+:global {
+    :root {
+        --base-pm: 8px;
+        --base-br: 3px;
+
+        --default-color: #4f545c;
+        --neth-brand-color: #26a599;
+        --heart-red: #f04747;
+
+        --accent-background: linear-gradient(to right, #485563, #31353a);
+        --accent-content-color: #fff;
+        --sidebar-background: #F3F3F4;
+
+        --separator-color: rgba(186, 188, 191, 0.4);
+        --light-title-color: #BBBBBB;
+        --light-title-color-darker: darken(#BBBBBB, 20%);
+       
+        --menu-button-hover: rgba(79,84,92,.1);
+        
+
+        --sidebar-max-width: 670px;
+        --content-max-width: 940px;
+
+        --link-list-grid-column-template: 1fr 100px 150px 55px;
+        --link-list-grid-row-template: 15px;
+        --link-list-grid-column-gap: var(--base-pm);
+    }
+
+}
