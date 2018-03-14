@@ -1,9 +1,4 @@
 :local {
-    .table {
-        margin-top: var(--base-pm);
-        padding: var(--base-pm);
-    }
-
     .tableHeaderList {
         display: grid;
         grid-template-columns: var(--link-list-grid-column-template);
