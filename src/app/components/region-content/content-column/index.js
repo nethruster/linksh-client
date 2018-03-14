@@ -1,16 +1,25 @@
 import { h } from 'preact'
-import { connect } from 'unistore/preact'
+import { Switch, Route, Redirect } from 'react-router-dom'
 
 import UserActivity from './user-activity'
 import UserSettings from './user-settings'
 
 import style from './styles.scss'
 
-export default connect('activeSection')(({activeSection}) => {
+export default function ContentColumn () {
   return (
     <div class={style.contentColumn}>
-      {activeSection === 'uActivity' && <UserActivity />}
-      {activeSection === 'uSettings' && <UserSettings />}
+      <Switch>
+        <Redirect exact from='/' to='/activity' />
+        <Route
+          exact
+          path='/activity'
+          component={UserActivity} />
+        <Route
+          exact
+          path='/settings'
+          component={UserSettings} />
+      </Switch>
     </div>
   )
-})
+}

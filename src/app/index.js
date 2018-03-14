@@ -1,4 +1,5 @@
 import { h } from 'preact'
+import { BrowserRouter } from 'react-router-dom'
 
 import RegionSidebar from './components/region-sidebar'
 import RegionContent from './components/region-content'
@@ -12,9 +13,11 @@ import style from './styles.scss'
 
 export default function App () {
   return (
-    <div id={style.appWrapper} class='flex'>
-      <RegionSidebar />
-      <RegionContent />
-    </div>
+    <BrowserRouter>
+      <div id={style.appWrapper} class='flex'>
+        <RegionSidebar />
+        <RegionContent />
+      </div>
+    </BrowserRouter>
   )
 }

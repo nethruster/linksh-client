@@ -1,3 +1,7 @@
 :local {
-    .menu { margin: 0 var(--base-pm); }
+    .menu { 
+        margin: 0 var(--base-pm);
+
+        a { color: inherit; }
+    }
 }
