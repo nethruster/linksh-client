@@ -3,7 +3,7 @@ import { Provider } from 'unistore/preact'
 
 import App from './app/index.js'
 
-import store from './store'
+import {store} from 'store'
 
 if (module.hot || process.env.NODE_ENV !== 'production') {
   require('preact/devtools')

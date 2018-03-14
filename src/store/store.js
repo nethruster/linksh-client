@@ -18,9 +18,12 @@ if (module.hot || process.env.NODE_ENV !== 'production') {
 }
 
 let actions = store => ({ // eslint-disable-line no-unused-vars
-  switchCurrentSection (state, newSection) {
-    return { activeSection: newSection }
+  switchCurrentSection (state, event) {
+    return { activeSection: event.currentTarget.dataset.sectiontrigger }
   }
 })
 
-export default store
+export {
+  store,
+  actions
+}

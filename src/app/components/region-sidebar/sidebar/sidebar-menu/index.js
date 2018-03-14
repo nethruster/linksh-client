@@ -9,8 +9,8 @@ export default function SidebarMenu () {
   return (
     <div class={style.menu}>
       <LightHeader title='linksh' />
-      <MenuButton title='My URLS' isActive />
-      <MenuButton title='Account Settings' />
+      <MenuButton title='My URLS' sectionName='uActivity' />
+      <MenuButton title='Account Settings' sectionName='uSettings' />
       <MenuButton title='Log out' />
     </div>
   )

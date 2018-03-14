@@ -1,5 +1,5 @@
 /**
- * Initial store contains the default values of the store when the app is initialized.
+ * initial-store contains the default values of the store when the app is initialized.
  *
  * Schema
  * - appIsFetching: Any part of the app is fetching something or busy. Defaults to false. {Boolean}
@@ -8,7 +8,7 @@
 
 const initialStore = {
   appIsFetching: false,
-  activeSection: 'activity'
+  activeSection: 'uActivity'
 }
 
 export default initialStore

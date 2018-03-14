@@ -79,6 +79,7 @@ module.exports = {
       APP_DIR + '/shared-assets/style',
       APP_DIR + '/shared-assets/scripts',
       APP_DIR + '/shared-assets/img',
+      APP_DIR + '/store',
       'node_modules'
     ]
   },
