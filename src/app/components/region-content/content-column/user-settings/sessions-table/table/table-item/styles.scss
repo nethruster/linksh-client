@@ -1,0 +1,34 @@
+:local {
+    .tableItem {
+        display: grid;
+        grid-template-columns: var(--session-list-grid-column-template);
+        grid-template-rows: var(--list-grid-row-template);
+        grid-column-gap: var(--list-grid-column-gap);
+        align-items: center;
+        max-width: 100%;
+
+        font-size: 14px;        
+
+        p,
+        a {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            align-items: center;
+        }
+
+        li { height: 100%; }
+
+        .tableItem, 
+        p,
+        a,
+        li { overflow: hidden; }
+    }
+
+    .removeAllSessions {
+        margin-left: var(--base-pm);
+
+        color: var(--heart-red);
+
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,16 @@
+:local {
+    .tableHeaderList {
+        display: grid;
+        grid-template-columns:  var(--session-list-grid-column-template);
+        grid-template-rows: 15px;
+        grid-column-gap: var(--list-grid-column-gap);
+        align-items: center;
+
+        padding: var(--base-pm) 0;
+
+        font-size: 14px;
+
+        color: var(--light-title-color);
+        border-bottom: 1px solid var(--separator-color);
+    }
+}

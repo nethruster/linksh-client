@@ -9,7 +9,7 @@ import style from './styles.scss'
 export default function SidebarMenu () {
   return (
     <div class={style.menu}>
-      <LightHeader title='linksh' />
+      <LightHeader title='linksh' sidebarHeader />
       <Link to='activity'>
         <MenuButton title='My URLS' sectionName='activity' />
       </Link>

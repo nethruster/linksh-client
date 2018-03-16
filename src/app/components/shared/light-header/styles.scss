@@ -1,22 +1,15 @@
 :local {
     .lightHeader {
         font-size: 12px;
-        font-weight: bold;
+        font-weight: 600;
         text-transform: uppercase;
 
         color: var(--light-title-color);
 
-        padding: 6px 10px;
-    }
-
-    .darker {
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 16px;
         letter-spacing: .5px;
-
-        color: var(--light-title-color-darker);
-        
-        padding: 0;
     }
+
+    .darker { color: var(--light-title-color-darker); }
+
+    .sidebarHeader { padding: var(--base-pm) calc(var(--base-pm) * 2); }
 }

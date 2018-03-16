@@ -3,7 +3,7 @@
         margin: 0 var(--base-pm);
 
         p {
-            padding: 6px 10px;
+            padding: var(--base-pm) calc(var(--base-pm) * 2);
 
             &:not(:first-child) {
                 padding-top: calc(var(--base-pm) * 1.5);
@@ -31,4 +31,6 @@
 
         &:hover { color: var(--heart-red); }
     }
+
+    .footerLinks { padding: var(--base-pm); }
 }

@@ -1,0 +1,15 @@
+:local {
+    .input {
+            max-width: 100%;
+            margin: var(--base-pm) 0;
+
+            color: var(--default-color);
+
+            line-height: 34px;
+            border-radius: var(--base-br);
+            border: 1px solid var(--separator-color);
+          
+            padding-left: var(--base-pm);
+            padding-right: var(--base-pm);
+        }
+}

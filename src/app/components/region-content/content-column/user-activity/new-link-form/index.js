@@ -7,7 +7,7 @@ import style from './styles.scss'
 
 export default function NewLinkForm () {
   return (
-    <div class={style.form}>
+    <div>
       <LightHeader darker title='create new link' />
       <form class={`flex ${style.form}`}>
         <div class={style.formInputs}>

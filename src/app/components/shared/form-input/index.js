@@ -1,7 +1,9 @@
 import { h } from 'preact'
 
-export default function FormInput ({type, placeholder}) {
+import style from './styles.scss'
+
+export default function FormInput ({type, placeholder, value, autocomplete}) {
   return (
-    <input type={type} placeholder={placeholder} />
+    <input class={style.input}type={type} placeholder={placeholder} value={value} autocomplete={autocomplete} />
   )
 }

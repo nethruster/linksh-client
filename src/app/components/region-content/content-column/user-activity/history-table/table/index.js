@@ -4,10 +4,10 @@ import TableItem from './table-item'
 
 import style from './styles.scss'
 
-export default function HistoryTable () {
+export default function Table () {
   return (
-    <div class={style.table}>
-      <div class={style.tableHeader}>
+    <div>
+      <div>
         <ul class={style.tableHeaderList}>
           <li>Original URL</li>
           <li>Created</li>

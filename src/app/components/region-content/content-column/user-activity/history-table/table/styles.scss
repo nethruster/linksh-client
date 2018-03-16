@@ -2,11 +2,11 @@
     .tableHeaderList {
         display: grid;
         grid-template-columns: var(--link-list-grid-column-template);
-        grid-template-rows: var(--link-list-grid-row-template);
-        grid-column-gap: var(--link-list-grid-column-gap);
+        grid-template-rows: 15px;
+        grid-column-gap: var(--list-grid-column-gap);
         align-items: center;
 
-        padding: calc(var(--base-pm) * 2) 0;
+        padding: var(--base-pm) 0;
 
         font-size: 14px;
 

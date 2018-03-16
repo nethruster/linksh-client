@@ -9,12 +9,8 @@
 
         cursor: pointer;
 
-        svg {
-            transition: color .15s ease;
-        }
+        svg { transition: color .25s ease; }
 
-        &:hover {
-            color: var(--light-title-color-darker);
-        }
+        &:hover { color: var(--light-title-color-darker); }
     }
 }

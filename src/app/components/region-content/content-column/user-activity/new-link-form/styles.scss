@@ -8,7 +8,7 @@
             width: 100%;
             max-width: 120px;
 
-            background-image: var(--accent-background);
+            background-color: var(--accent-background);
             color: var(--accent-content-color);
             
             border: none;
@@ -24,20 +24,6 @@
 
     .formInputs {
         width: 100%;
-
-        input {
-            max-width: 100%;
-            margin: var(--base-pm) 0;
-
-            color: var(--light-title-color);
-
-            line-height: 34px;
-            border-radius: var(--base-br);
-            border: 1px solid var(--separator-color);
-          
-            padding-left: var(--base-pm);
-            padding-right: var(--base-pm);
-        }
 
         input:first-child { width: 100%; }
     }

@@ -1,23 +1,23 @@
 :local {
     .tableItem {
         display: grid;
-        grid-template-columns: 1fr 100px 150px 55px;
-        grid-template-rows: 15px;
-        grid-column-gap: var(--base-pm);
+        grid-template-columns: var(--link-list-grid-column-template);
+        grid-template-rows: var(--list-grid-row-template);
+        grid-column-gap: var(--list-grid-column-gap);
+        align-items: center;
         max-width: 100%;
-
-        padding: 16px 0;
 
         font-size: 14px;        
 
         p,
         a {
-            height: 100%;
-
+            min-height: 15px;
             white-space: nowrap;
             text-overflow: ellipsis;
             align-items: center;
         }
+
+        li { height: 100%; }
 
         .tableItem, 
         p,
