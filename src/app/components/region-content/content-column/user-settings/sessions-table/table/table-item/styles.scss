@@ -22,6 +22,12 @@
         p,
         a,
         li { overflow: hidden; }
+
+        @media(max-width: 580px) {
+            grid-template-columns: var(--mobile-session-list-grid-column-template);
+
+            .hideSmall { display: none!important; }
+        }
     }
 
     .removeAllSessions {

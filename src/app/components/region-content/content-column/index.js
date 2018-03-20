@@ -1,14 +1,17 @@
 import { h } from 'preact'
 import { Switch, Route, Redirect } from 'react-router-dom'
+import { connect } from 'unistore/preact'
+
+import { actions } from 'store'
 
 import UserActivity from './user-activity'
 import UserSettings from './user-settings'
 
 import style from './styles.scss'
 
-export default function ContentColumn () {
+export default connect('mobileViewportState', actions)(({ mobileViewportState }) => {
   return (
-    <div class={style.contentColumn}>
+    <div class={`${style.contentColumn} ${mobileViewportState ? style.mobile : ''}`}>
       <Switch>
         <Redirect exact from='/' to='/activity' />
         <Route
@@ -22,4 +25,4 @@ export default function ContentColumn () {
       </Switch>
     </div>
   )
-}
+})

@@ -2,11 +2,17 @@
     .form {
         margin: var(--base-pm) 0;
 
+        @media(max-width: 455px) { flex-direction: column; }
+
         .button {
             height: 38px;
-            margin: var(--base-pm) calc(var(--base-pm) * 4);
+            margin: var(--base-pm) 0;
             width: 100%;
-            max-width: 120px;
+           
+            @media(min-width: 455px) {
+                max-width: 120px;
+                margin: var(--base-pm) calc(var(--base-pm) * 4);
+            }
 
             background-color: var(--accent-background);
             color: var(--accent-content-color);

@@ -9,7 +9,7 @@ export default function Table () {
     <div>
       <div>
         <ul class={style.tableHeaderList}>
-          <li>IP</li>
+          <li class={style.hideSmall}>IP</li>
           <li>Last used</li>
           <li />
         </ul>

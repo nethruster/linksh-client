@@ -11,10 +11,10 @@ export default function TableItem ({ oUrl, sUrl, date, hits }) {
             <p>{oUrl}</p>
           </a>
         </li>
-        <li class='flex flex-cross-center'>
+        <li class={`flex flex-cross-center ${style.hideSmall}`}>
           <p>{date}</p>
         </li>
-        <li class='flex flex-cross-center'>
+        <li class={`flex flex-cross-center ${style.hideSmall}`}>
           <a href={sUrl} target='_blank' rel='noopener'>
             <p>{sUrl}</p>
           </a>

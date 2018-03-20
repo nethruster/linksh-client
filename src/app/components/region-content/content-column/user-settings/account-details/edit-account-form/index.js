@@ -66,7 +66,7 @@ export default class EditAccountForm extends Component {
           {state.isFormActive &&
           <div>
             <Separator />
-            <div class={`flex flex-sb`}>
+            <div class={`flex flex-sb ${style.formButtons}`}>
               <button class={style.warningButton}>Delete account</button>
               <div>
                 <button class={style.cancelButton} onClick={this.toggleForm}>Cancel</button>

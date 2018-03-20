@@ -23,5 +23,11 @@
         p,
         a,
         li { overflow: hidden; }
+
+        @media(max-width: 550px) {
+            grid-template-columns: var(--mobile-link-list-grid-column-template);
+
+            .hideSmall { display: none!important; }
+        }
     }
 }

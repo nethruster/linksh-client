@@ -18,7 +18,7 @@ export default connect('mobileViewportState', actions)(class App extends Compone
   constructor (props) {
     super(props)
 
-    this.breakWidth = 720
+    this.breakWidth = 850
 
     this.state = {
       isNarrowViewport: this.evalNarrowViewport()

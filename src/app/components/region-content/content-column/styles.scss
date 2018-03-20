@@ -5,6 +5,7 @@
         min-height: 100%;
         
         padding: calc(var(--base-pm) * 8) calc(var(--base-pm) * 5) calc(var(--base-pm) * 10);
-        
     }
+
+    .mobile { padding: calc(var(--base-pm) * 8) calc(var(--base-pm) * 3) calc(var(--base-pm) * 10); }
 }

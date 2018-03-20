@@ -10,8 +10,8 @@ export default function Table () {
       <div>
         <ul class={style.tableHeaderList}>
           <li>Original URL</li>
-          <li>Created</li>
-          <li>Short URL</li>
+          <li class={style.hideSmall}>Created</li>
+          <li class={style.hideSmall}>Short URL</li>
           <li>Hits</li>
         </ul>
       </div>

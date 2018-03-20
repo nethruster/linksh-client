@@ -32,8 +32,10 @@
         --content-max-width: 940px;
 
         --link-list-grid-column-template: 1fr 100px 150px 55px;
-
         --session-list-grid-column-template: 150px 150px 1fr;
+
+        --mobile-link-list-grid-column-template: 1fr 55px;
+        --mobile-session-list-grid-column-template: 150px 1fr;
 
         --list-grid-row-template: 42px;
         --list-grid-column-gap: var(--base-pm);
