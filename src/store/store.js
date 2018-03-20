@@ -14,6 +14,10 @@ if (module.hot || process.env.NODE_ENV !== 'production') {
 let actions = store => ({
   toggleSidebar (state) {
     return { mobileSidebarState: !state.mobileSidebarState }
+  },
+
+  toggleMobileViewport (state) {
+    return { mobileViewportState: !state.mobileViewportState }
   }
 })
 
