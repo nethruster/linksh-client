@@ -1,0 +1,22 @@
+:local {
+    .triggerWrapper {
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin: 24px 38px;
+        padding: 8px 16px;
+        border-radius: 4px;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        border: 1px solid rgba(0,0,0,.2);
+
+
+        cursor: pointer;
+
+        &:hover { color: var(--light-title-color-darker); }
+    }
+
+    .mobileActive { margin-left: 170px; }
+}

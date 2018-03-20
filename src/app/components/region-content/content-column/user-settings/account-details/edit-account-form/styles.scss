@@ -29,6 +29,8 @@
  
             cursor: pointer;
 
+            &:hover { background-color: var(--accent-background-darker); }
+
             &.saveButton {
                 margin-bottom: 0;
 
@@ -47,9 +49,7 @@
                 background-image: none;
                 background-color: transparent;
 
-                &:hover {
-                    border-color: var(--heart-red-darker);
-                }
+                &:hover { border-color: var(--heart-red-darker); }
             }
 
             &.cancelButton {

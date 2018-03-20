@@ -1,5 +1,6 @@
 const initialStore = {
-  appIsFetching: false
+  appIsFetching: false,
+  mobileSidebarState: false
 }
 
 export default initialStore

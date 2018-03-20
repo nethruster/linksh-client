@@ -4,4 +4,9 @@
 
         padding: calc(var(--base-pm) * 8) var(--base-pm) calc(var(--base-pm) * 8) calc(var(--base-pm) * 3);        
     }
+
+    .mobileActive {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

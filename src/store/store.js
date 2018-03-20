@@ -11,9 +11,9 @@ if (module.hot || process.env.NODE_ENV !== 'production') {
   store = createStore(initialStore)
 }
 
-let actions = store => ({ // eslint-disable-line no-unused-vars
-  switchCurrentSection (state, newSection) {
-    return { activeSection: newSection }
+let actions = store => ({
+  toggleSidebar (state) {
+    return { mobileSidebarState: !state.mobileSidebarState }
   }
 })
 
