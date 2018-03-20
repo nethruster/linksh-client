@@ -2,7 +2,7 @@ import { h } from 'preact'
 
 import style from './styles.scss'
 
-export default function TableItem ({oUrl, sUrl, date, hits}) {
+export default function TableItem ({ oUrl, sUrl, date, hits }) {
   return (
     <li>
       <ul class={style.tableItem}>

@@ -13,7 +13,9 @@ export default connect(['mobileSidebarState', 'mobileViewportState'], actions)(c
     return (
       <div class={`flex ${style.regionSidebar} ${mobileViewportState ? style.mobile : ''} ${mobileViewportState && mobileSidebarState ? style.mobileActive : ''}`}>
         <SidebarTrigger />
-        <div class={`${style.sidebarOverlay} ${mobileViewportState && mobileSidebarState ? style.sidebarOverlayActive : ''}`} onClick={toggleSidebar} />
+        <div
+          class={`${style.sidebarOverlay} ${mobileViewportState && mobileSidebarState ? style.sidebarOverlayActive : ''}`}
+          onClick={toggleSidebar} />
         <Sidebar />
       </div>
     )

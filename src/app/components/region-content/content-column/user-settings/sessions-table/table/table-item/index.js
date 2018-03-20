@@ -4,7 +4,7 @@ import IconButton from '../../../../../../shared/icon-button'
 
 import style from './styles.scss'
 
-export default function TableItem ({ip, date}) {
+export default function TableItem ({ ip, date }) {
   let isCurrentSession = date === 'current'
   return (
     <li>
@@ -16,7 +16,9 @@ export default function TableItem ({ip, date}) {
           <p>{isCurrentSession ? 'Currently active' : date}</p>
         </li>
         <li class='flex flex-cross-center'>
-          <a class={`${isCurrentSession && style.removeAllSessions}`}>{isCurrentSession ? 'Terminate all other sessions' : <IconButton icon='close' />}</a>
+          <a class={`${isCurrentSession && style.removeAllSessions}`}>
+            {isCurrentSession ? 'Terminate all other sessions' : <IconButton icon='close' />}
+          </a>
         </li>
       </ul>
     </li>

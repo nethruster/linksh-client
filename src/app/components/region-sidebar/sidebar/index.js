@@ -9,7 +9,7 @@ import Separator from '../../shared/separator'
 
 import style from './styles.scss'
 
-export default connect('mobileSidebarState', actions)(({mobileSidebarState}) => {
+export default connect('mobileSidebarState', actions)(({ mobileSidebarState }) => {
   return (
     <div class={`${style.sidebar} ${mobileSidebarState ? style.mobileActive : ''}`}>
       <SidebarMenu />
