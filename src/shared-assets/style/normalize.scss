@@ -290,6 +290,7 @@
         cursor: pointer;
         text-decoration: none;
         transition: opacity .5s,color .5s;
+        touch-action: manipulation;
 
         &:hover { text-decoration: underline; }
     }

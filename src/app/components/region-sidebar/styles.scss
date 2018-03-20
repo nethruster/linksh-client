@@ -6,21 +6,32 @@
         flex: 1;
 
         background-color: var(--sidebar-background);
+
+        transition: transform .3s ease-in-out;
     }
 
     .mobile {
         position: fixed;
-        left: -250px;
+        transform: translateX(-250px);
     }
 
-    .mobileActive { left: 0; }
+    .mobileActive {  transform: translateX(0) }
 
     .sidebarOverlay {
         position: fixed;
-        background-color: rgba(0,0,0,.2);
         top: 0;
         right: 0;
-        width: calc(100% - 250px);
+        width: 100vw;
+        transform: translateX(100%);
         height: 100%;
+        background-color: rgba(0,0,0,0);
+        pointer-events: none;
+        transition: background-color .3s ease-in-out;
+        touch-action: manipulation;
+    }
+    
+    .sidebarOverlayActive {
+        background-color: rgba(0,0,0,.2);
+        pointer-events: initial;
     }
 }

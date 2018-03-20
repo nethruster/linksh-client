@@ -12,11 +12,27 @@
 
         border: 1px solid rgba(0,0,0,.2);
 
+        opacity: 0;
+        pointer-events: none;
+
+        transition: opacity .3s ease-in-out, margin-left .3s ease-in-out, transform .3s ease-in-out;
+
 
         cursor: pointer;
+        touch-action: manipulation;
 
         &:hover { color: var(--light-title-color-darker); }
     }
 
-    .mobileActive { margin-left: 170px; }
+    .mobile {
+        opacity: 1;
+        pointer-events: initial;
+
+        transform: translateX(250px);
+    }
+
+    .mobileActive { 
+        margin-left: 170px;
+        transform: translateX(0);
+    }
 }
