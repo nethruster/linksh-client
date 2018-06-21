@@ -6,8 +6,9 @@
         --default-color: #4f545c;
         --neth-brand-color: #26a599;
 
-        --heart-red: #f04747;
-        --heart-red-darker: darken(#f04747, 15%);
+        $red: #f04747;
+        --heart-red: $red;
+        --heart-red-darker: darken($red, 15%);
 
         $green: #43b581;
         --green: $green;
@@ -25,7 +26,7 @@
         $light-title-color: #BBB;
         --light-title-color: $light-title-color;
         --light-title-color-darker: darken($light-title-color, 20%);
-       
+
         --menu-button-hover: rgba(79,84,92,.1);
 
         --sidebar-max-width: 670px;

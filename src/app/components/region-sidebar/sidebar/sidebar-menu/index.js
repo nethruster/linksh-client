@@ -9,7 +9,7 @@ import MenuButton from './menu-button'
 
 import style from './styles.scss'
 
-export default connect(['mobileSidebarState', 'mobileViewportState'], actions)(({ mobileSidebarState, mobileViewportState, toggleSidebar }) => {
+export default connect(['mobileViewportState'], actions)(({ mobileViewportState, toggleSidebar }) => {
   return (
     <div class={style.menu}>
       <LightHeader title='linksh' sidebarHeader />
