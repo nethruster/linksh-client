@@ -5,10 +5,10 @@ import Table from './table'
 
 import style from './styles.scss'
 
-export default function History () {
+export default function History() {
   return (
     <div class={style.history}>
-      <LightHeader darker title='history' />
+      <LightHeader darker title="history" />
       <Table />
     </div>
   )

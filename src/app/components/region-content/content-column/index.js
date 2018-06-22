@@ -9,19 +9,20 @@ import UserSettings from './user-settings'
 
 import style from './styles.scss'
 
-export default connect('mobileViewportState', actions)(({ mobileViewportState }) => {
+export default connect(
+  'mobileViewportState',
+  actions
+)(({ mobileViewportState }) => {
   return (
-    <div class={`${style.contentColumn} ${mobileViewportState ? style.mobile : ''}`}>
+    <div
+      class={`${style.contentColumn} ${
+        mobileViewportState ? style.mobile : ''
+      }`}
+    >
       <Switch>
-        <Redirect exact from='/' to='/activity' />
-        <Route
-          exact
-          path='/activity'
-          component={UserActivity} />
-        <Route
-          exact
-          path='/settings'
-          component={UserSettings} />
+        <Redirect exact from="/" to="/activity" />
+        <Route exact path="/activity" component={UserActivity} />
+        <Route exact path="/settings" component={UserSettings} />
       </Switch>
     </div>
   )
