@@ -13,10 +13,10 @@
         color: var(--light-title-color);
         border-bottom: 1px solid var(--separator-color);
 
-        @media(max-width: 580px) {
+        @media (max-width: 580px) {
             grid-template-columns: var(--mobile-session-list-grid-column-template);
 
-            .hideSmall { display: none!important; }
+            .hideSmall { display: none !important; }
         }
     }
 }

@@ -2,14 +2,14 @@
     .form {
         margin: var(--base-pm) 0;
 
-        @media(max-width: 455px) { flex-direction: column; }
+        @media (max-width: 455px) { flex-direction: column; }
 
         .button {
             height: 38px;
             margin: var(--base-pm) 0;
             width: 100%;
 
-            @media(min-width: 455px) {
+            @media (min-width: 455px) {
                 max-width: 120px;
                 margin: var(--base-pm) calc(var(--base-pm) * 4);
             }

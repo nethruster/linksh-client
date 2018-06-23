@@ -9,7 +9,9 @@
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --mode development",
     "lint": "eslint  \"./src/**/*.js\"",
-    "lint-fix": "eslint  \"./src/**/*.js\" --fix"
+    "lint-fix": "eslint  \"./src/**/*.js\" --fix",
+    "lint-styles": "stylelint  --syntax scss \"./src/**/*.scss\"",
+    "lint-styles-fix": "stylelint  --syntax scss \"./src/**/*.scss\" --fix"
   },
   "devDependencies": {
     "autoprefixer": "^8.1.0",
@@ -39,6 +41,8 @@
     "prettier": "^1.13.5",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
+    "stylelint": "^9.3.0",
+    "stylelint-config-prettier": "^3.3.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.1.0",
     "webpack-cli": "^2.0.10",

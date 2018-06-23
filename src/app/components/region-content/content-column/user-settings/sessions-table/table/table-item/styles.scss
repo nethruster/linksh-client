@@ -7,7 +7,7 @@
         align-items: center;
         max-width: 100%;
 
-        font-size: 14px;        
+        font-size: 14px;
 
         p,
         a {
@@ -18,15 +18,15 @@
 
         li { height: 100%; }
 
-        .tableItem, 
+        .tableItem,
         p,
         a,
         li { overflow: hidden; }
 
-        @media(max-width: 580px) {
+        @media (max-width: 580px) {
             grid-template-columns: var(--mobile-session-list-grid-column-template);
 
-            .hideSmall { display: none!important; }
+            .hideSmall { display: none !important; }
         }
     }
 

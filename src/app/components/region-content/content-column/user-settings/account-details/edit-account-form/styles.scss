@@ -5,7 +5,7 @@
         background-color: var(--sidebar-background);
         border-radius: var(--base-br);
 
-        @media(max-width: 455px) { flex-direction: column; }
+        @media (max-width: 455px) { flex-direction: column; }
 
         p,
         input {
@@ -83,7 +83,7 @@
         &:not(:first-of-type) { margin-top: calc(var(--base-pm) * 2); }
     }
 
-    @media(max-width: 420px) {
+    @media (max-width: 420px) {
         .formButtons {
             flex-direction: column-reverse;
 
