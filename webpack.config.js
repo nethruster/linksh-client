@@ -12,7 +12,7 @@ const APP_DIR = path.resolve(__dirname, 'src')
 module.exports = {
   mode: isProduction ? 'production' : 'development',
   entry: {
-    'main': APP_DIR + '/app.js'
+    main: APP_DIR + '/app.js'
   },
   optimization: {
     splitChunks: {
@@ -72,7 +72,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'react': 'preact-compat',
+      react: 'preact-compat',
       'react-dom': 'preact-compat'
     },
     modules: [
@@ -84,11 +84,13 @@ module.exports = {
     ]
   },
   plugins: [
-    isProduction ? new CompressionPlugin({
-      algorithm: 'gzip',
-      test: /\.(js|css|json|svg|png|jpeg)$/,
-      minRatio: 0.8
-    }) : new webpack.HotModuleReplacementPlugin(),
+    isProduction
+      ? new CompressionPlugin({
+          algorithm: 'gzip',
+          test: /\.(js|css|json|svg|png|jpeg)$/,
+          minRatio: 0.8
+        })
+      : new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       minify: {
         collapseWhitespace: true,
