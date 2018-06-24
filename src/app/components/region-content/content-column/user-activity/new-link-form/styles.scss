@@ -5,6 +5,7 @@
         @media (max-width: 455px) { flex-direction: column; }
 
         .button {
+            position: relative;
             height: 38px;
             margin: var(--base-pm) 0;
             width: 100%;

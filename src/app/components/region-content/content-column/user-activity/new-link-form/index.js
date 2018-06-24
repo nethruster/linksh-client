@@ -1,4 +1,5 @@
 import { h } from 'preact'
+import Ink from 'react-ink'
 
 import LightHeader from '../../../../shared/light-header'
 import FormInput from '../../../../shared/form-input'
@@ -16,6 +17,7 @@ export default function NewLinkForm() {
         </div>
         <button type="submit" class={style.button}>
           shorten url
+          <Ink />
         </button>
       </form>
     </div>
