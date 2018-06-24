@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 // const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const isProduction = process.argv.indexOf('production') !== -1 // Check if we are in production mode
+const isProduction = process.env.NODE_ENV === 'production' // Check if we are in production mode
 
 const BUILD_DIR = path.resolve(__dirname, 'dist')
 const APP_DIR = path.resolve(__dirname, 'src')
@@ -35,7 +35,10 @@ module.exports = {
       {
         test: /\.js$/,
         include: APP_DIR,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
+        options: {
+          cacheDirectory: true
+        }
       },
       {
         test: /\.scss$/,
@@ -68,7 +71,9 @@ module.exports = {
     historyApiFallback: true,
     stats: 'minimal',
     hot: true,
-    inline: true
+    inline: true,
+    port: 8081,
+    host: '0.0.0.0'
   },
   resolve: {
     alias: {
