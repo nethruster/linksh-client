@@ -27,6 +27,7 @@
                 "polyfill": true,
                 "regenerator": true
             }
-        ]
+        ],
+        "transform-decorators-legacy"
     ]
 }
