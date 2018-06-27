@@ -15,11 +15,11 @@ export default function NewLinkForm() {
           <FormInput type="text" placeholder="Original URL" />
           <FormInput type="text" placeholder="Custom ID" />
         </div>
-        <button type="submit" class={style.button}>
-          shorten url
-          <Ink />
-        </button>
       </form>
+      <button type="submit" class={style.button}>
+        shorten url
+        <Ink />
+      </button>
     </div>
   )
 }

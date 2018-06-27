@@ -1,4 +1,12 @@
-import { serverEndpoint } from 'config'
+let API_ENDPOINT = ''
+
+function _checkAPIEndpoint() {
+  if (!API_ENDPOINT) {
+    API_ENDPOINT = localStorage.getItem('lsh-config').serverEndpoint
+  } else {
+    return
+  }
+}
 
 export default function restquest(
   method = 'GET',
@@ -6,6 +14,8 @@ export default function restquest(
   zoneId = '',
   reqParams = {}
 ) {
+  _checkAPIEndpoint()
+
   let requestObj = {
     method,
     mode: 'cors',
@@ -19,6 +29,11 @@ export default function restquest(
   }
 
   return fetch(`${serverEndpoint}/api/${requestZone}/${zoneId}`, requestObj)
-    .then(response => response.json())
+    .then(response => {
+      // if (!response.ok) {
+
+      // }
+      return response.json()
+    })
     .then(result => result)
 }

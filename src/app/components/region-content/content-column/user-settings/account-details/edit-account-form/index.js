@@ -44,29 +44,43 @@ export default class EditAccountForm extends Component {
           }`}
         >
           <div class={style.formInput}>
-            <LightHeader darker={state.isFormActive} title="username" />
             {state.isFormActive ? (
-              <FormInput type="text" value="gariasf" autocomplete="username" />
+              <FormInput
+                type="text"
+                value="gariasf"
+                autocomplete="current-username"
+                placeholder="Username"
+              />
             ) : (
-              <p>gariasf</p>
+              <div>
+                <LightHeader title="username" />
+                <p>gariasf</p>
+              </div>
             )}
           </div>
           <div class={style.formInput}>
-            <LightHeader darker={state.isFormActive} title="email" />
             {state.isFormActive ? (
               <FormInput
                 type="email"
                 value="noreply@gariasf.com"
-                autocomplete="email"
+                placeholder="Email"
+                autocomplete="current-email"
               />
             ) : (
-              <p>noreply@gariasf.com</p>
+              <div>
+                <LightHeader title="email" />
+                <p>noreply@gariasf.com</p>
+              </div>
             )}
           </div>
           {state.isFormActive && (
             <div class={style.formInput}>
-              <LightHeader darker title="Current password" />
-              <FormInput type="password" autocomplete="password" />
+              <FormInput
+                type="password"
+                placeholder="Current Password"
+                autocomplete="current-password"
+                onInput={this.handleEmailChange}
+              />
             </div>
           )}
           {state.isFormActive && (

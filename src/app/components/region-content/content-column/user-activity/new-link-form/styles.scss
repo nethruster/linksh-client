@@ -3,35 +3,35 @@
         margin: var(--base-pm) 0;
 
         @media (max-width: 455px) { flex-direction: column; }
-
-        .button {
-            position: relative;
-            height: 38px;
-            margin: var(--base-pm) 0;
-            width: 100%;
-
-            @media (min-width: 455px) {
-                max-width: 120px;
-                margin: var(--base-pm) calc(var(--base-pm) * 4);
-            }
-
-            background-color: transparent;
-            color: var(--accent-background);
-
-            border: 1px solid rgba(0, 0, 0, 0.23);
-            border-radius: var(--base-br);
-
-            text-transform: uppercase;
-            font-size: 13px;
-            font-weight: 600;
-
-            cursor: pointer;
-        }
     }
 
     .formInputs {
         width: 100%;
 
         input:first-child { width: 100%; }
+    }
+
+    .button {
+        position: relative;
+        height: 38px;
+        margin: var(--base-pm) 0;
+        width: 100%;
+
+        @media (min-width: 455px) {
+            max-width: 120px;
+            margin: var(--base-pm) calc(var(--base-pm) * 4);
+        }
+
+        background-color: transparent;
+        color: var(--accent-background);
+
+        border: 1px solid rgba(0, 0, 0, 0.23);
+        border-radius: var(--base-br);
+
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 600;
+
+        cursor: pointer;
     }
 }

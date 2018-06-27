@@ -1,11 +1,13 @@
 import { h, Component } from 'preact'
 import { BrowserRouter } from 'react-router-dom'
 import { connect } from 'unistore/preact'
+import { bind } from 'decko'
 
 import { actions } from 'store'
 
 import RegionSidebar from './components/region-sidebar'
 import RegionContent from './components/region-content'
+import Login from './components/login'
 
 // Global style and CSS custom properties
 import 'reset.scss'
@@ -15,7 +17,7 @@ import 'vars.scss'
 import style from './styles.scss'
 
 export default connect(
-  'mobileViewportState',
+  ['mobileViewportState', 'isAuthenticated'],
   actions
 )(
   class App extends Component {
@@ -25,11 +27,15 @@ export default connect(
       this.breakWidth = 850
 
       this.state = {
-        isNarrowViewport: this.evalNarrowViewport()
+        isNarrowViewport: this.evalNarrowViewport(),
+        isConfigLoaded: false
       }
+    }
 
-      this.evalNarrowViewport = this.evalNarrowViewport.bind(this)
-      this.handleWindowResize = this.handleWindowResize.bind(this)
+    componentWillMount() {
+      this.fetchConfig().then(result => {
+        this.setState({ isConfigLoaded: true })
+      })
     }
 
     componentDidMount() {
@@ -38,10 +44,19 @@ export default connect(
       window.addEventListener('resize', this.handleWindowResize)
     }
 
+    @bind
+    fetchConfig() {
+      return fetch('/webclient/config').then(result => {
+        return true
+      })
+    }
+
+    @bind
     evalNarrowViewport() {
       return window.innerWidth <= this.breakWidth
     }
 
+    @bind
     handleWindowResize() {
       if (this.evalNarrowViewport() && !this.props.mobileViewportState) {
         this.props.toggleMobileViewport()
@@ -53,14 +68,23 @@ export default connect(
     }
 
     render() {
-      return (
-        <BrowserRouter>
-          <div id={style.appWrapper} class="flex">
-            <RegionSidebar />
-            <RegionContent />
-          </div>
-        </BrowserRouter>
-      )
+      if (!this.state.isConfigLoaded) {
+        // TODO: Use a loader instead of text
+        return <p>Loading</p>
+      } else {
+        return (
+          <BrowserRouter>
+            {this.props.isAuthenticated ? (
+              <div id={style.appWrapper} class="flex">
+                <RegionSidebar />
+                <RegionContent />
+              </div>
+            ) : (
+              <Login />
+            )}
+          </BrowserRouter>
+        )
+      }
     }
   }
 )
