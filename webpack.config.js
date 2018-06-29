@@ -54,6 +54,13 @@ module.exports = {
         options: {
           name: 'assets/img/[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.(woff2|woff)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'assets/fonts/[name].[ext]?[hash]'
+        }
       }
     ]
   },
@@ -72,13 +79,7 @@ module.exports = {
       react: 'preact-compat',
       'react-dom': 'preact-compat'
     },
-    modules: [
-      APP_DIR + '/shared-assets/style',
-      APP_DIR + '/shared-assets/scripts',
-      APP_DIR + '/shared-assets/img',
-      APP_DIR + '/store',
-      'node_modules'
-    ]
+    modules: [APP_DIR + '/shared-assets', APP_DIR + '/store', 'node_modules']
   },
   plugins: [
     isProduction
