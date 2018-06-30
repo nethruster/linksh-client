@@ -1,7 +1,9 @@
 import { h, render } from 'preact'
 
+import Playground from './views/'
+
 import './app.scss'
 
 const mountPoint = document.querySelector('#linksh')
 
-render(<div>Linksh</div>, mountPoint, mountPoint.lastElementChild)
+render(<Playground />, mountPoint, mountPoint.lastElementChild)
