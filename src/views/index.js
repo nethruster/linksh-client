@@ -1,6 +1,7 @@
 import { h } from 'preact'
 
 import Typography from './playground/typography'
+import Buttons from './playground/buttons'
 
 export default function Playground() {
   return (
@@ -17,6 +18,8 @@ export default function Playground() {
       </ul> */}
 
       <Typography />
+      <hr />
+      <Buttons />
     </div>
   )
 }

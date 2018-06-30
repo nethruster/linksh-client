@@ -1,0 +1,7 @@
+:global {
+    svg {
+        &.marginRight { margin-right: 8px; }
+
+        path { fill: var(--color-secondary); }
+    }
+}

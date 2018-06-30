@@ -1,6 +1,5 @@
 :root {
-    --base-pm: 8px;
-    --base-br: 3px;
+    --base-br: 8px;
 
     // Color
     --color-initial: #fff;
@@ -8,7 +7,7 @@
     --color-accent:  #3361f3;
 
     --color-secondary: #606c76;
-    --color-tertiary: #f4f5f6;
-    --color-quaternary: #d1d1d1;
-    --color-quinary: #e1e1e1;
+    --color-tertiary: rgba(66, 133, 244, 0.04);
+    --color-quaternary: #d2e3fc;
+    --color-quinary: #dadce0;
 }

@@ -1,0 +1,48 @@
+// Button
+
+:global {
+    $button-height: 34px;
+    button {
+        overflow: hidden;
+        position: relative;
+        background-color: transparent;
+        display: inline-block;
+        height: $button-height;
+        padding: 0 3.0rem;
+        border: .1rem solid var(--color-quinary);
+        border-radius: var(--base-br);
+        color: var(--color-accent);
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: .1rem;
+        line-height: $button-height;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
+        user-select: none;
+        cursor: pointer;
+
+        &:focus,
+        &:hover {
+            background-color: var(--color-tertiary);
+            border-color: var(--color-quaternary);
+        }
+
+        &[disabled] {
+            cursor: not-allowed;
+            opacity: .5;
+
+            &:focus,
+            &:hover {
+                background-color: transparent;
+                border-color: var(--color-quinary);
+            }
+        }
+
+        &.icon-button {
+            border-radius: 100%;
+            padding: 1.0rem;
+        }
+    }
+}

@@ -1,15 +1,23 @@
 // Spacing
 
-button,
-dd,
-dt,
-li { margin-bottom: 1.0rem; }
+:global {
+    button,
+    dd,
+    dt,
+    li { margin-bottom: 1.0rem; }
 
-input,
-select,
-textarea { margin-bottom: 1.5rem; }
+    input,
+    select,
+    textarea { margin-bottom: 1.5rem; }
 
-figure,
-form,
-p,
-ul { margin-bottom: 2.5rem; }
+    figure,
+    form,
+    p,
+    ul { margin-bottom: 2.5rem; }
+
+    hr {
+        margin: 3.0rem 0;
+        border: 0;
+        border-top: .1rem solid var(--color-quinary);
+    }
+}

@@ -49,11 +49,15 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif)$/,
         loader: 'file-loader',
         options: {
           name: 'assets/img/[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader'
       },
       {
         test: /\.(woff2|woff)$/,
