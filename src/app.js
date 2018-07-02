@@ -1,6 +1,6 @@
 import { h, render } from 'preact'
 
-import Playground from './views/'
+import Playground from './views/playground'
 
 import './app.scss'
 

@@ -1,0 +1,98 @@
+:global {
+
+    // Input and textarea
+    .input-container {
+        position: relative;
+        width: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .input-underline {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        margin: auto;
+        border-bottom: 2px solid var(--color-accent);
+        opacity: 0;
+        transition: opacity 120ms ease-out, width 180ms linear;
+    }
+
+    label {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        span {
+            width: 100%;
+            font-size: .9em;
+        }
+
+        &.focused {
+            span { color: var(--color-accent); }
+
+            .input-underline {
+                width: 100%;
+                opacity: 1;
+            }
+
+            input { caret-color:var(--color-accent); }
+        }
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    textarea:focus { caret-color:var(--color-accent); }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        display: flex;
+        -webkit-appearance: none;
+        width: 100%;
+        border: none;
+        caret-color: var(--color-quaternary);
+        background-color: var(--color-quinary);
+        color: inherit;
+        font-family: inherit;
+        font-size: .9em;
+        text-overflow: ellipsis;
+        padding: 6px;
+        border-bottom: 8px;
+        line-height: 20px;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 65px;
+        max-height: 300px;
+    }
+
+    // Select
+    select {
+        -webkit-appearance: none;
+        max-width: 100%;
+        width: 100%;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E %3Cpath fill='%235f6368' d='M7,10L12,15L17,10H7Z' /%3E %3C/svg%3E") calc(100% - 4px) center no-repeat;
+        background-color: var(--color-quinary);
+        background-size: 24px;
+        border: none;
+        border-radius: 4px;
+        color: inherit;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        outline: none;
+        padding-bottom: 6px;
+        padding-top: 6px;
+        padding-left: 6px;
+    }
+
+    option { background-color: #fff; }
+}

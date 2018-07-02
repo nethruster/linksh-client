@@ -1,11 +1,12 @@
 import { h } from 'preact'
 
-import Typography from './playground/typography'
-import Buttons from './playground/buttons'
+import Typography from './typography'
+import Buttons from './buttons'
+import Inputs from './forms'
 
 export default function Playground() {
   return (
-    <div style="padding: 32px;">
+    <div style="padding:24px;max-width: 500px">
       {/* <ul>
         <li>Typography</li>
         <li>Buttons</li>
@@ -20,6 +21,8 @@ export default function Playground() {
       <Typography />
       <hr />
       <Buttons />
+      <hr />
+      <Inputs />
     </div>
   )
 }
