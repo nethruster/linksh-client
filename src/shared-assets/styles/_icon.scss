@@ -1,6 +1,6 @@
 :global {
     svg {
-        &.marginRight { margin-right: 8px; }
+        &.marginRight { margin-right: var(--base-pm); }
 
         path { fill: var(--color-secondary); }
     }
