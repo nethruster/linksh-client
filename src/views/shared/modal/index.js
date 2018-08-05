@@ -49,5 +49,3 @@ export default connect(
     }
   }
 )
-
-// TODO: PASS CUSTOM FOOTER CALLBACK PROP AND REACT TO TYPE PROP
