@@ -43,5 +43,8 @@
         object-fit: contain;
     }
 
-    button, a, input, textarea { outline: none; }
+    button, a, input, textarea { 
+        outline: none;
+        margin: 0;
+    }
 }

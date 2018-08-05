@@ -9,11 +9,19 @@ export default function Button({
   hrefBlank,
   type = 'default',
   icon,
-  iconButton
+  iconButton,
+  onClickExecute,
+  alternative
 }) {
   if (iconButton) {
     return (
-      <button aria-label={text} type={type} class="icon-button">
+      <button
+        aria-label={text}
+        type={type}
+        class="icon-button"
+        altButton={alternative}
+        onClick={onClickExecute}
+      >
         <a
           href={href}
           target={hrefBlank ? '_blank' : ''}
@@ -27,7 +35,12 @@ export default function Button({
     )
   } else if (href) {
     return (
-      <button aria-label={text} type={type}>
+      <button
+        aria-label={text}
+        type={type}
+        onClick={onClickExecute}
+        altButton={alternative}
+      >
         <a
           href={href}
           target={hrefBlank ? '_blank' : ''}
@@ -43,7 +56,13 @@ export default function Button({
   }
 
   return (
-    <button aria-label={text} type={type} class="flex flex-full-center">
+    <button
+      aria-label={text}
+      type={type}
+      class="flex flex-full-center"
+      onClick={onClickExecute}
+      altButton={alternative}
+    >
       {icon && <Icon name={icon} marginRight />}
       <span>{text}</span>
       <Ink />

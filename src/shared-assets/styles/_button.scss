@@ -8,16 +8,14 @@
         display: inline-block;
         height: var(--button-height);
         padding: 0 calc(var(--base-pm) * 4);
-        border: .1rem solid var(--color-quinary);
+        border: .1rem solid var(--color-quaternary);
         border-radius: var(--base-br);
         color: var(--color-accent);
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-weight: 700;
-        letter-spacing: .1rem;
         line-height: var(--button-height);
         text-align: center;
         text-decoration: none;
-        text-transform: uppercase;
         white-space: nowrap;
         user-select: none;
         cursor: pointer;
@@ -39,9 +37,27 @@
             }
         }
 
+        &[altButton] {
+            background-color: var(--color-accent);
+            color: var(--color-quinary);
+
+            svg path {
+                fill: var(--color-initial);
+            }
+
+            a:focus,
+            a:hover {
+                color: var(--color-quinary)
+            }
+        }
+
         &.icon-button {
             border-radius: 100%;
             padding: 1.0rem;
+        }
+
+        & + button {
+            margin-left: 8px;
         }
     }
 }
