@@ -3,6 +3,7 @@ import { h } from 'preact'
 import Typography from './typography'
 import Buttons from './buttons'
 import Inputs from './forms'
+import Modals from './modals'
 
 export default function Playground() {
   return (
@@ -23,6 +24,8 @@ export default function Playground() {
       <Buttons />
       <hr />
       <Inputs />
+      <hr />
+      <Modals />
     </div>
   )
 }
