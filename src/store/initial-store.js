@@ -1,17 +1,17 @@
 const initialStore = {
   modal: {
-    modalState: false,
+    state: false,
+    props: {
+      title: '',
+      confirmButtonText: 'Ok',
+      closeButtonText: 'Cancel',
+      actionRequired: false
+    },
     onAccept: () => {
       console.log('accept')
     },
     onClose: () => {
       console.log('close')
-    },
-    modalProps: {
-      title: '',
-      confirmButtonText: 'Ok',
-      closeButtonText: 'Cancel',
-      actionRequired: false
     }
   }
 }

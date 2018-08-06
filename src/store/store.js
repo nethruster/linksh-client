@@ -16,7 +16,7 @@ let actions = store => ({
   toggleModal(state) {
     let currentModalStore = Object.assign(state.modal, {})
 
-    if (currentModalStore.modalState) {
+    if (currentModalStore.state) {
       document.body.removeAttribute('style')
     } else {
       document.body.style.cssText = `padding-right: ${GENERIC_BROWSER_SCROLLBAR_WIDTH}px;overflow: hidden;`
@@ -25,7 +25,7 @@ let actions = store => ({
     store.setState({
       modal: {
         ...currentModalStore,
-        modalState: !currentModalStore.modalState
+        state: !currentModalStore.state
       }
     })
   },
@@ -36,7 +36,7 @@ let actions = store => ({
     store.setState({
       modal: {
         ...currentModalStore,
-        modalProps: props
+        props
       }
     })
   },

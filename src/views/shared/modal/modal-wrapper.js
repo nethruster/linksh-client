@@ -12,27 +12,27 @@ export default connect(
   class ModalWrapper extends Component {
     @bind
     toggleModalHandler() {
-      if (
-        this.props.modal.modalState &&
-        this.props.modal.modalProps.actionRequired
-      )
+      if (this.props.modal.state && this.props.modal.props.actionRequired) {
         return
+      }
 
       this.props.toggleModal()
     }
 
     render({ into = 'body', children, modal }) {
-      return modal.modalState ? (
-        <Portal into={into}>
-          <div
-            class="modal-wrapper"
-            style={{ top: Math.round(window.pageYOffset) }}
-          >
-            <div class="modal-overlay" onClick={this.toggleModalHandler} />
-            {children}
-          </div>
-        </Portal>
-      ) : null
+      return (
+        modal.state && (
+          <Portal into={into}>
+            <div
+              class="modal-wrapper"
+              style={{ top: Math.round(window.pageYOffset) }}
+            >
+              <div class="modal-overlay" onClick={this.toggleModalHandler} />
+              {children}
+            </div>
+          </Portal>
+        )
+      )
     }
   }
 )

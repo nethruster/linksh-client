@@ -29,15 +29,15 @@ export default connect(
         <ModalWrapper>
           <div class="modal-container">
             <div class="modal-content">
-              <strong class="modal-title">{modal.modalProps.title}</strong>
+              <strong class="modal-title">{modal.props.title}</strong>
               <div>{children}</div>
               <div class="flex modal-actions">
                 <Button
-                  text={modal.modalProps.closeButtonText}
+                  text={modal.props.closeButtonText}
                   onClickExecute={this.closeButtonHanlder}
                 />
                 <Button
-                  text={modal.modalProps.confirmButtonText}
+                  text={modal.props.confirmButtonText}
                   alternative
                   onClickExecute={this.acceptButtonHanlder}
                 />

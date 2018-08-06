@@ -15,7 +15,7 @@ export default connect(
     @bind
     toggleModalHandler() {
       this.props.setModalProps({
-        ...this.props.modal.modalProps,
+        ...this.props.modal.props,
         title: 'A modal Title',
         confirmButtonText: 'Accept',
         closeButtonText: 'Deny',
