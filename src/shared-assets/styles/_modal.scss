@@ -1,0 +1,56 @@
+:global {
+    .modal-overlay {
+        width: 100%;
+        min-height: 100%;
+        background-color: rgba(0, 0, 0, 0.45);
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0;
+        :local {
+            animation: fade-in both 250ms ease;
+        }
+    }
+
+    .modal-wrapper {
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .modal-container {
+        border-radius: 8px;
+        bottom: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.12);
+        overflow-y: hidden;
+        padding: 0;
+        top: 50%;
+        width: 512px;
+        max-width: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        height: -webkit-fit-content;
+        margin: auto;
+        background: white;
+    }
+
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        max-height: 100vh;
+        overflow: auto;
+        padding: 16px;
+    }
+
+    .modal-title {
+        margin-bottom: 8px;
+    }
+
+    .modal-actions {
+        justify-content: flex-end;
+    }
+}

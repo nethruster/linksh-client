@@ -17,7 +17,7 @@ module.exports = {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test: /preact|preact-compat|react-router-dom|unistore/,
+          test: /preact|preact-compat|react-router-dom|unistore|decko|react-ink|preact-portal/,
           chunks: 'initial',
           name: 'vendor',
           enforce: true
@@ -49,11 +49,15 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        test: /\.(png|jpg|jpeg|gif)$/,
         loader: 'file-loader',
         options: {
           name: 'assets/img/[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader'
       },
       {
         test: /\.(woff2|woff)$/,

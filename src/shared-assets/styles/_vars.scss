@@ -1,0 +1,21 @@
+:root {
+    // Layout
+    --base-br: 6px;
+    --base-pm: 6px;
+
+    --button-height: 34px;
+    --textarea-min-height: 65px;
+    --textarea-max-height: 300px;
+
+    // Color
+    --color-initial: #fff;
+    --color-accent:  #1a73e8;
+    --color-secondary: #606c76;
+    --color-tertiary: rgba(66, 133, 244, 0.04);
+    --color-quaternary: #e0e0e0;
+    --color-quinary: #f1f3f4;
+
+    // Misc
+    --custom-font-family: 'Exo 2';
+    --select-arrow-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' style='width:24px;height:24px' viewBox='0 0 24 24'%3E %3Cpath fill='%235f6368' d='M7,10L12,15L17,10H7Z' /%3E %3C/svg%3E");
+}

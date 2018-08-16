@@ -1,0 +1,97 @@
+:global {
+
+    // Input and textarea
+    .input-container {
+        position: relative;
+        width: 100%;
+        border-radius: calc(var(--base-br) / 2);
+        overflow: hidden;
+    }
+
+    .input-underline {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        margin: auto;
+        border-bottom: 2px solid var(--color-accent);
+        opacity: 0;
+        transition: opacity 120ms ease-out, width 180ms linear;
+    }
+
+    label {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        span {
+            width: 100%;
+            font-size: .9em;
+        }
+
+        &.focused {
+            span { color: var(--color-accent); }
+
+            .input-underline {
+                width: 100%;
+                opacity: 1;
+            }
+
+            input { caret-color:var(--color-accent); }
+        }
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    textarea:focus { caret-color:var(--color-accent); }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+        -webkit-appearance: none;
+        display: flex;
+        width: 100%;
+        border: none;
+        caret-color: var(--color-quaternary);
+        background-color: var(--color-quinary);
+        color: inherit;
+        font-family: inherit;
+        font-size: .9em;
+        text-overflow: ellipsis;
+        padding: var(--base-pm);
+        border-bottom: 8px;
+        line-height: 20px;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: var(--textarea-min-height);
+        max-height: var(--textarea-max-height);
+    }
+
+    // Select
+    select {
+        -webkit-appearance: none;
+        max-width: 100%;
+        width: 100%;
+        background: var(--select-arrow-source) calc(100% - 4px) center no-repeat;
+        background-color: var(--color-quinary);
+        background-size: 24px;
+        border: none;
+        border-radius: calc(var(--base-br) / 2);
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        outline: none;
+        padding-bottom: var(--base-pm);
+        padding-top: var(--base-pm);
+        padding-left: var(--base-pm);
+    }
+
+    option { background-color: #fff; }
+}

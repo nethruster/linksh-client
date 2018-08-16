@@ -1,4 +1,12 @@
+@import 'vars';
 @import 'reset';
 @import 'utils';
-@import 'fonts';
-@import 'vars';
+@import 'spacing';
+
+@import 'typography';
+@import 'link';
+@import 'icon';
+@import 'button';
+@import 'form';
+@import 'modal';
+@import 'spinner';
