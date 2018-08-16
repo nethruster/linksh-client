@@ -14,13 +14,13 @@ export default connect(
   class Modal extends Component {
     @bind
     acceptButtonHanlder() {
-      this.props.modal.onAccept()
+      this.props.modal.props.onAccept()
       this.props.toggleModal()
     }
 
     @bind
     closeButtonHanlder() {
-      this.props.modal.onClose()
+      this.props.modal.props.onClose()
       this.props.toggleModal()
     }
 

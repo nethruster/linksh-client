@@ -27,27 +27,5 @@ export default store => ({
         props
       }
     })
-  },
-
-  setOnAccept(state, onAccept) {
-    let currentModalStore = Object.assign(state.modal, {})
-
-    store.setState({
-      modal: {
-        ...currentModalStore,
-        onAccept
-      }
-    })
-  },
-
-  setOnClose(state, onClose) {
-    let currentModalStore = Object.assign(state.modal, {})
-
-    store.setState({
-      modal: {
-        ...currentModalStore,
-        onClose
-      }
-    })
   }
 })
