@@ -17,7 +17,7 @@ module.exports = {
     splitChunks: {
       cacheGroups: {
         vendor: {
-          test: /preact|preact-compat|react-router-dom|unistore/,
+          test: /preact|preact-compat|react-router-dom|unistore|decko|react-ink|preact-portal/,
           chunks: 'initial',
           name: 'vendor',
           enforce: true
