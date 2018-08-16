@@ -2,6 +2,7 @@ import { h } from 'preact'
 import Ink from 'react-ink'
 
 import Icon from '../icon'
+import Spinner from '../spinner'
 
 export default function Button({
   text,
@@ -11,7 +12,8 @@ export default function Button({
   icon,
   iconButton,
   onClickExecute,
-  alternative
+  alternative,
+  spinner
 }) {
   if (iconButton) {
     return (
@@ -29,7 +31,7 @@ export default function Button({
           class="flex flex-full-center"
         >
           {icon && <Icon name={icon} />}
-          <Ink />
+          {!spinner && <Ink />}
         </a>
       </button>
     )
@@ -48,8 +50,8 @@ export default function Button({
           class="flex flex-full-center"
         >
           {icon && <Icon name={icon} marginRight />}
-          <span>{text}</span>
-          <Ink />
+          <span>{spinner ? <Spinner /> : text}</span>
+          {!spinner && <Ink />}
         </a>
       </button>
     )
@@ -64,8 +66,8 @@ export default function Button({
       altButton={alternative}
     >
       {icon && <Icon name={icon} marginRight />}
-      <span>{text}</span>
-      <Ink />
+      <span>{spinner ? <Spinner /> : text}</span>
+      {!spinner && <Ink />}
     </button>
   )
 }
