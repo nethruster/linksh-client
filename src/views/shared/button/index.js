@@ -13,7 +13,8 @@ export default function Button({
   iconButton,
   onClickExecute,
   alternative,
-  spinner
+  spinner,
+  noBorder
 }) {
   if (iconButton) {
     return (
@@ -23,6 +24,7 @@ export default function Button({
         class="icon-button"
         altButton={alternative}
         onClick={onClickExecute}
+        noBorder={noBorder}
       >
         <a
           href={href}
@@ -31,7 +33,7 @@ export default function Button({
           class="flex flex-full-center"
         >
           {icon && <Icon name={icon} />}
-          {!spinner && <Ink />}
+          <Ink />
         </a>
       </button>
     )
@@ -42,6 +44,7 @@ export default function Button({
         type={type}
         onClick={onClickExecute}
         altButton={alternative}
+        noBorder={noBorder}
       >
         <a
           href={href}
@@ -64,6 +67,7 @@ export default function Button({
       class="flex flex-full-center"
       onClick={onClickExecute}
       altButton={alternative}
+      noBorder={noBorder}
     >
       {icon && <Icon name={icon} marginRight />}
       <span>{spinner ? <Spinner /> : text}</span>
