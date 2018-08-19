@@ -14,13 +14,8 @@ export default function Login() {
         <Input type="text" title="Username" id="login-uname" />
         <Input type="password" title="Password" id="login-password" />
         <div class={`flex flex-sb ${styles.loginCardActions}`}>
-          <div
-            role="button"
-            class={`flex flex-cross-center ${styles.secondaryButton}`}
-          >
-            <p>Create account</p>
-          </div>
-          {/* Transform into button */}
+          <Button text="Create account" noBorder />
+
           <Button text="Sign in" alternative />
         </div>
       </div>
