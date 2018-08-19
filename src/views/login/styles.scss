@@ -1,0 +1,38 @@
+:local {
+    .loginWrapper {
+        min-height: 100vh;
+        max-width: 100%;
+    }
+    
+    .authCard {
+        background-color: #fff;
+        overflow-y: auto;
+        padding: 24px 24px 36px;
+        position: relative;
+        height: auto;
+        min-height: 500px;
+        flex: 1;
+
+        &Actions { margin-top: 24px; }
+    }
+
+    .secondaryButton {
+        p { 
+            margin: 0;
+            font-weight: bold;
+            font-size: .9em;
+        }
+    }
+
+    .authFooter {
+        padding: 0 24px 36px;
+
+        a {
+            font-size: .85em;
+            font-weight: bold;
+            opacity: .5;
+
+            &:not(:last-child) { margin-right: 24px; }
+        }
+    }
+}

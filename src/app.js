@@ -1,17 +1,23 @@
-import { h, render } from 'preact'
+import { h, Component, render } from 'preact'
 import { Provider } from 'unistore/preact'
 import 'preact/debug'
 
 import { store } from 'store'
+import Router from './router'
 
 import './app.scss'
 
 const mountPoint = document.querySelector('#linksh')
 
-const App = () => (
-  <Provider store={store}>
-    <div>lknsh</div>
-  </Provider>
-)
+// App is a Component instance to keep the hot reloading behaviour
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <Router />
+      </Provider>
+    )
+  }
+}
 
 render(<App />, mountPoint, mountPoint.lastElementChild)
