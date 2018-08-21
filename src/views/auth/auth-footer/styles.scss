@@ -1,0 +1,13 @@
+:local {
+    .authFooter {
+        padding: 0 24px 36px;
+
+        a {
+            font-size: .85em;
+            font-weight: bold;
+            opacity: .5;
+
+            &:not(:last-child) { margin-right: 24px; }
+        }
+    }
+}
