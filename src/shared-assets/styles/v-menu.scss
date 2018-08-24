@@ -1,0 +1,41 @@
+:global {
+    .vmenu-overlay {
+        width: 100%;
+        min-height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0;
+    }
+
+    .vmenu-wrapper {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .vmenu-container {
+        border-radius: 8px 8px 0 0;
+        bottom: 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.12);
+        padding: 24px;
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        overflow-y: auto;
+        left: 0px;
+        right: 0px;
+        height: -webkit-fit-content;
+        margin: auto;
+        background: white;
+        min-height: 200px;
+        max-height: 40vh;
+        flex-direction: row-reverse;
+    }
+
+    .vmenu-content { flex: 1; }
+}

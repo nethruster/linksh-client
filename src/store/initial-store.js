@@ -13,6 +13,17 @@ const initialStore = {
         console.log('close')
       }
     }
+  },
+  vmenu: {
+    state: false,
+    props: {
+      onOpen: () => {
+        console.log('accept')
+      },
+      onClose: () => {
+        console.log('close')
+      }
+    }
   }
 }
 

@@ -2,7 +2,7 @@
     .modal-overlay {
         width: 100%;
         min-height: 100%;
-        background-color: rgba(0, 0, 0, 0.45);
+        background-color: rgba(0, 0, 0, 0.3);
         position: absolute;
         left: 0px;
         right: 0px;
@@ -29,12 +29,12 @@
         padding: 0;
         top: 50%;
         width: 512px;
-        max-width: 100%;
+        max-width: calc(100% - 16px);
         position: absolute;
         left: 0px;
         right: 0px;
         height: -webkit-fit-content;
-        margin: auto;
+        margin: auto 8px;
         background: white;
     }
 
@@ -46,11 +46,7 @@
         padding: 16px;
     }
 
-    .modal-title {
-        margin-bottom: 8px;
-    }
+    .modal-title { margin-bottom: 8px; }
 
-    .modal-actions {
-        justify-content: flex-end;
-    }
+    .modal-actions { justify-content: flex-end; }
 }

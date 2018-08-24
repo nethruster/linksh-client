@@ -5,6 +5,7 @@ import Buttons from './buttons'
 import Inputs from './forms'
 import Modals from './modals'
 import Spinners from './spinners'
+import VMenus from './v-menus'
 
 export default function Playground() {
   return (
@@ -18,6 +19,8 @@ export default function Playground() {
       <Modals />
       <hr />
       <Spinners />
+      <hr />
+      <VMenus />
     </div>
   )
 }

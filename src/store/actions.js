@@ -27,5 +27,33 @@ export default store => ({
         props
       }
     })
+  },
+
+  toggleMenu(state) {
+    let currentMenuStore = Object.assign(state.vmenu, {})
+
+    if (currentMenuStore.state) {
+      document.body.removeAttribute('style')
+    } else {
+      document.body.style.cssText = `padding-right: ${GENERIC_BROWSER_SCROLLBAR_WIDTH}px;overflow: hidden;`
+    }
+
+    store.setState({
+      vmenu: {
+        ...currentMenuStore,
+        state: !currentMenuStore.state
+      }
+    })
+  },
+
+  setMenuProps(state, props) {
+    let currentMenuStore = Object.assign(state.vmenu, {})
+
+    store.setState({
+      vmenu: {
+        ...currentMenuStore,
+        props
+      }
+    })
   }
 })
