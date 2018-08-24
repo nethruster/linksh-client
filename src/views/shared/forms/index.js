@@ -24,8 +24,8 @@ export default class Input extends Component {
 
   @bind
   handleInputDataChange(event) {
-    if (this.props.handleInputDataChange) {
-      this.props.handleInputDataChange()
+    if (this.props.onInputHandler) {
+      this.props.onInputHandler(event)
     }
   }
 

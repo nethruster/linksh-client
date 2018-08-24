@@ -6,72 +6,44 @@ import Spinner from '../spinner'
 
 export default function Button({
   text,
-  href,
-  hrefBlank,
   type = 'default',
   icon,
   iconButton,
   onClickExecute,
   alternative,
   spinner,
-  noBorder
+  noBorder,
+  customClass
 }) {
   if (iconButton) {
     return (
-      <button
+      <div
+        role="button"
         aria-label={text}
         type={type}
-        class="icon-button"
+        class={`icon-button flex flex-full-center ${customClass}`}
         altButton={alternative}
         onClick={onClickExecute}
         noBorder={noBorder}
       >
-        <a
-          href={href}
-          target={hrefBlank ? '_blank' : ''}
-          rel="noopener"
-          class="flex flex-full-center"
-        >
-          {icon && <Icon name={icon} />}
-          <Ink />
-        </a>
-      </button>
+        {icon && <Icon name={icon} />}
+        <Ink />
+      </div>
     )
-  } else if (href) {
+  } else {
     return (
       <button
         aria-label={text}
         type={type}
+        class={`flex flex-full-center ${customClass}`}
         onClick={onClickExecute}
         altButton={alternative}
         noBorder={noBorder}
       >
-        <a
-          href={href}
-          target={hrefBlank ? '_blank' : ''}
-          rel="noopener"
-          class="flex flex-full-center"
-        >
-          {icon && <Icon name={icon} marginRight />}
-          <span>{spinner ? <Spinner /> : text}</span>
-          {!spinner && <Ink />}
-        </a>
+        {icon && <Icon name={icon} marginRight />}
+        <span>{spinner ? <Spinner /> : text}</span>
+        <Ink />
       </button>
     )
   }
-
-  return (
-    <button
-      aria-label={text}
-      type={type}
-      class="flex flex-full-center"
-      onClick={onClickExecute}
-      altButton={alternative}
-      noBorder={noBorder}
-    >
-      {icon && <Icon name={icon} marginRight />}
-      <span>{spinner ? <Spinner /> : text}</span>
-      {!spinner && <Ink />}
-    </button>
-  )
 }
