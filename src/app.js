@@ -3,7 +3,7 @@ import { Provider } from 'unistore/preact'
 import 'preact/debug'
 
 import { store } from 'store'
-import Router from './router'
+import Router from './base-router'
 
 import './app.scss'
 
