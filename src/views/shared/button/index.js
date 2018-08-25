@@ -8,6 +8,8 @@ export default function Button({
   text,
   type = 'default',
   icon,
+  iconColor,
+  iconSize,
   iconButton,
   onClickExecute,
   alternative,
@@ -26,7 +28,7 @@ export default function Button({
         onClick={onClickExecute}
         noBorder={noBorder}
       >
-        {icon && <Icon name={icon} />}
+        {icon && <Icon name={icon} color={iconColor} size={iconSize} />}
         <Ink />
       </div>
     )
