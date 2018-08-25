@@ -1,0 +1,14 @@
+:local {
+    .newLinkButtonWrapper {
+        background-color: var(--color-accent);
+        color: #fff;
+        border-radius: 24px;
+        padding: 12px 20px;
+        position: absolute;
+        top: -20px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, .15), 0 3px 3px rgba(0, 0, 0, .22);
+        cursor: pointer;
+
+        path { fill: #fff; }
+    }
+}

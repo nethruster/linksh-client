@@ -11,11 +11,20 @@ const LinksTable = asyncComponent(() =>
   )
 )
 
+const MenuBar = asyncComponent(() =>
+  import(/* webpackChunkName: "menu-bar" */ './menu-bar').then(
+    module => module.default
+  )
+)
+
 export default function Panel() {
   return (
-    <Switch>
-      <Redirect exact from="/" to="/panel" />
-      <Route exact path="/panel" component={LinksTable} />
-    </Switch>
+    <div>
+      <Switch>
+        <Redirect exact from="/" to="/panel" />
+        <Route exact path="/panel" component={LinksTable} />
+      </Switch>
+      <MenuBar />
+    </div>
   )
 }
