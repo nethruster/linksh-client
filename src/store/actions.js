@@ -7,7 +7,8 @@ export default store => ({
     if (currentModalStore.state) {
       document.body.removeAttribute('style')
     } else {
-      document.body.style.cssText = `padding-right: ${GENERIC_BROWSER_SCROLLBAR_WIDTH}px;overflow: hidden;`
+      // TODO: Check if device is touchscreen device
+      // document.body.style.cssText = `padding-right: ${GENERIC_BROWSER_SCROLLBAR_WIDTH}px;overflow: hidden;`
     }
 
     store.setState({
@@ -35,7 +36,8 @@ export default store => ({
     if (currentMenuStore.state) {
       document.body.removeAttribute('style')
     } else {
-      document.body.style.cssText = `padding-right: ${GENERIC_BROWSER_SCROLLBAR_WIDTH}px;overflow: hidden;`
+      // TODO: Check if device is touchscreen device
+      // document.body.style.cssText = `padding-right: ${GENERIC_BROWSER_SCROLLBAR_WIDTH}px;overflow: hidden;`
     }
 
     store.setState({
