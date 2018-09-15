@@ -18,6 +18,7 @@ export default function Auth() {
   return (
     <Switch>
       <Redirect exact from="/" to="/login" />
+      <Redirect exact from="/panel" to="/login" />
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
     </Switch>

@@ -24,6 +24,9 @@ const initialStore = {
         console.log('close')
       }
     }
+  },
+  auth: {
+    state: !!sessionStorage.getItem('lsh-usersession')
   }
 }
 

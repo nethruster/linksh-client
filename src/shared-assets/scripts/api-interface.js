@@ -4,7 +4,6 @@ const baseRequestParams = (method, requestBody) => {
   return {
     method,
     mode: 'cors',
-    cache: 'no-cache',
     credentials: 'include',
     headers: {
       Accept: 'application/json',
@@ -32,7 +31,7 @@ export async function userLogin(credentials) {
     })
   )
 
-  console.log(response)
+  return response.json()
 }
 
 export async function userRegister(registerData) {
@@ -44,7 +43,7 @@ export async function userRegister(registerData) {
     })
   )
 
-  console.log(response)
+  return response
 }
 
 export async function userLogout() {

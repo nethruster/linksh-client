@@ -57,5 +57,15 @@ export default store => ({
         props
       }
     })
+  },
+
+  toggleAuthState(state) {
+    let currentAuthStore = Object.assign(state.auth, {})
+
+    store.setState({
+      auth: {
+        state: !currentAuthStore.state
+      }
+    })
   }
 })

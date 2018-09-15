@@ -1,7 +1,10 @@
-import { h } from 'preact'
+import { h, Component } from 'preact'
+import { connect } from 'unistore/preact'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import asyncComponent from 'scripts/async-component'
-import { checkUserAuthentication } from 'scripts/utils'
+import { checkSessionIntegrity } from 'scripts/utils'
+
+import { actions } from 'store'
 
 const Auth = asyncComponent(() =>
   import(/* webpackChunkName: "auth" */ './views/auth/').then(
@@ -15,10 +18,13 @@ const Panel = asyncComponent(() =>
   )
 )
 
-export default function Router() {
+export default connect(
+  'auth',
+  actions
+)(function Router({ auth }) {
   return (
     <BrowserRouter>
-      {checkUserAuthentication() ? <Panel /> : <Auth />}
+      {auth.state && checkSessionIntegrity() ? <Panel /> : <Auth />}
     </BrowserRouter>
   )
-}
+})

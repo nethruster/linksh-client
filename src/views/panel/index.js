@@ -22,6 +22,7 @@ export default function Panel() {
     <div>
       <Switch>
         <Redirect exact from="/" to="/panel" />
+        <Redirect exact from="/login" to="/panel" />
         <Route exact path="/panel" component={LinksTable} />
       </Switch>
       <MenuBar />
