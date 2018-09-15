@@ -73,12 +73,14 @@ export default connect(
                 title="Email"
                 id="login-email"
                 onInputHandler={this.handleEmailChange}
+                autocomplete="email"
               />
               <Input
                 type="password"
                 title="Password"
                 id="login-password"
                 onInputHandler={this.handlePasswordChange}
+                autocomplete="current-password"
               />
               <div class={`flex flex-sb ${styles.authCardActions}`}>
                 <Button

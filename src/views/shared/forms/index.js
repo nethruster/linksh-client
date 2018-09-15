@@ -33,7 +33,7 @@ export default class Input extends Component {
     return !!inputValue.trim().replace(/\s/g, '')
   }
 
-  render({ type, title, id }) {
+  render({ type, title, id, autocomplete }) {
     return (
       <label
         for={id}
@@ -48,6 +48,7 @@ export default class Input extends Component {
             onFocus={this.handleInputStateChange}
             onBlur={this.handleInputStateChange}
             onInput={this.handleInputDataChange}
+            autocomplete={autocomplete}
           />
           <div class="input-underline" />
         </div>
