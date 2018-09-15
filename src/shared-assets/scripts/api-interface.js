@@ -1,17 +1,6 @@
-import { ROUTE_API_TEST, ROUTE_LOGIN, ROUTE_REGISTER } from 'scripts/api-routes'
+import { loginUser, registerUser, logoutUser } from './api-endpoints/auth'
 
-const baseRequestParams = (method, requestBody) => {
-  return {
-    method,
-    mode: 'cors',
-    credentials: 'include',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(requestBody)
-  }
-}
+import { ROUTE_API_TEST } from 'scripts/api-routes'
 
 export async function testAPIConnection() {
   await fetch(ROUTE_API_TEST, baseRequestParams('GET')).catch(error => {
@@ -22,30 +11,4 @@ export async function testAPIConnection() {
   console.log('Found API endpoint online sucessfully')
 }
 
-export async function userLogin(credentials) {
-  let response = await fetch(
-    ROUTE_LOGIN,
-    baseRequestParams('POST', {
-      ...credentials,
-      useCookie: true
-    })
-  )
-
-  return response.json()
-}
-
-export async function userRegister(registerData) {
-  let response = await fetch(
-    ROUTE_REGISTER,
-    baseRequestParams('POST', {
-      ...registerData,
-      useCookie: true
-    })
-  )
-
-  return response.json()
-}
-
-export async function userLogout() {
-  return true
-}
+export { loginUser, registerUser, logoutUser }

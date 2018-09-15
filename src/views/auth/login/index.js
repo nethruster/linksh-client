@@ -7,7 +7,7 @@ import Input from '../../shared/forms'
 import Button from '../../shared/button'
 import AuthFooter from '../auth-footer'
 
-import { userLogin } from 'scripts/api-interface'
+import { loginUser } from 'scripts/api-interface'
 import { actions } from 'store'
 
 import styles from './styles.scss'
@@ -32,7 +32,7 @@ export default connect(
 
       // TODO: validate inputs
 
-      userLogin({
+      loginUser({
         email: this.state.email,
         password: this.state.password
       }).then(response => {
