@@ -14,3 +14,16 @@ export function checkSessionIntegrity() {
 
   return new Date(formatedDate).getTime() > Date.now()
 }
+
+export function baseRequestParams(method, requestBody) {
+  return {
+    method,
+    mode: 'cors',
+    credentials: 'include',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(requestBody)
+  }
+}
