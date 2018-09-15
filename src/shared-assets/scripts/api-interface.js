@@ -43,7 +43,7 @@ export async function userRegister(registerData) {
     })
   )
 
-  return response
+  return response.json()
 }
 
 export async function userLogout() {
