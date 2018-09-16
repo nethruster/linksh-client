@@ -14,12 +14,12 @@ export default connect(
   class VMenu {
     @bind
     toggleMenuHandler() {
-      this.props.toggleMenu()
+      this.props.toggleMenu(this.props.id)
     }
 
-    render({ children }) {
+    render({ children, id }) {
       return (
-        <VMenuWrapper>
+        <VMenuWrapper id={id}>
           <div class="flex vmenu-container">
             <div>
               <Button

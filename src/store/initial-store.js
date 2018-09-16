@@ -14,17 +14,21 @@ const initialStore = {
       }
     }
   },
-  vmenu: {
-    state: false,
-    props: {
-      onOpen: () => {
-        console.log('accept')
-      },
-      onClose: () => {
-        console.log('close')
-      }
-    }
-  },
+  /**
+   * Schema
+   * {
+   *     state: false,
+   *     props: {
+   *       onOpen: () => {
+   *         console.log('accept')
+   *       },
+   *       onClose: () => {
+   *         console.log('close')
+   *       }
+   *     }
+   *   }
+   */
+  vmenu: {},
   auth: {
     state: !!sessionStorage.getItem('lsh-usersession')
   }

@@ -12,12 +12,13 @@ export default connect(
   class VMenuWrapper extends Component {
     @bind
     toggleMenuHandler() {
-      this.props.toggleMenu()
+      this.props.toggleMenu(this.props.id)
     }
 
-    render({ into = 'body', children, vmenu }) {
+    // Doesn't update, why? That should solve the problem
+    render({ into = 'body', children, vmenu, id }) {
       return (
-        vmenu.state && (
+        vmenu.hasOwnProperty(id) && (
           <Portal into={into}>
             <div class="vmenu-wrapper">
               <div class="vmenu-overlay" onClick={this.toggleMenuHandler} />
