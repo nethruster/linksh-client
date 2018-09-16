@@ -24,7 +24,8 @@ export default connect(
 )(function Router({ auth }) {
   return (
     <BrowserRouter>
-      {auth.state && checkSessionIntegrity() ? <Panel /> : <Auth />}
+      {/* {auth.state && checkSessionIntegrity() ? <Panel /> : <Auth />} */}
+      <Panel />
     </BrowserRouter>
   )
 })
