@@ -5,6 +5,8 @@ import { bind } from 'decko'
 
 import Icon from '../../../shared/icon'
 import VMenu from '../../../shared/v-menu'
+import Input from '../../../shared/forms'
+import Button from '../../../shared/button'
 
 import { actions } from 'store'
 
@@ -33,10 +35,31 @@ export default connect(
           onclick={this.toggleMenuHandler}
         >
           <Icon name="add" color="#fff" marginRight size="24" />
-          <span>Add a new link</span>
+          <span>Create a new link</span>
           <Ink />
-          <VMenu id={this.menuId}>
-            <p>Add link Menu</p>
+          <VMenu id={this.menuId} title="Add new link">
+            <div>
+              <Input
+                type="url"
+                title="Url"
+                id="link-url"
+                onInputHandler={this.handleLinkUrlChange}
+              />
+              <Input
+                type="text"
+                title="Custom title"
+                id="link-title"
+                onInputHandler={this.handleLinkTitleChange}
+              />
+            </div>
+            <div class={`flex ${styles.submitFormButton}`}>
+              <Button
+                type="submit"
+                text="Create"
+                alternative
+                // onClickExecute={this.sumbitLoginForm}
+              />
+            </div>
           </VMenu>
         </div>
       )

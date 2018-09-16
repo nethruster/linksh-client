@@ -17,11 +17,12 @@ export default connect(
       this.props.toggleMenu(this.props.id)
     }
 
-    render({ children, id }) {
+    render({ children, id, title }) {
       return (
         <VMenuWrapper id={id}>
-          <div class="flex vmenu-container">
-            <div>
+          <div class="flex flex-dc vmenu-container">
+            <div class="flex flex-sb vmenu-header">
+              <h5>{title}</h5>
               <Button
                 iconButton
                 noBorder
