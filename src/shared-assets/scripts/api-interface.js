@@ -1,4 +1,4 @@
-import { loginUser, registerUser, logoutUser } from './api-endpoints/auth'
+import { loginUser, registerUser, logoutUser } from './api-sections/auth'
 
 import { ROUTE_API_TEST } from 'scripts/api-routes'
 
