@@ -1,6 +1,6 @@
 import { h, Component, render } from 'preact'
 import { Provider } from 'unistore/preact'
-import 'preact/debug'
+// import 'preact/debug'
 
 import { store } from 'store'
 import Router from './base-router'
