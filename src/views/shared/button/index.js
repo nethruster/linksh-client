@@ -12,23 +12,21 @@ export default function Button({
   onClickExecute,
   alternative,
   spinner,
-  noBorder,
   customClass
 }) {
   if (iconButton) {
     return (
-      <div
+      <button
         role="button"
         aria-label={text}
         type={type}
         class={`icon-button flex flex-full-center ${customClass}`}
         altButton={alternative}
         onClick={onClickExecute}
-        noBorder={noBorder}
       >
         {icon && <Icon name={icon} />}
         <Ink />
-      </div>
+      </button>
     )
   } else {
     return (
@@ -38,7 +36,6 @@ export default function Button({
         class={`flex flex-full-center ${customClass}`}
         onClick={onClickExecute}
         altButton={alternative}
-        noBorder={noBorder}
       >
         {icon && <Icon name={icon} marginRight />}
         <span>{spinner ? <Spinner /> : text}</span>

@@ -8,18 +8,6 @@ export default function Buttons() {
       <h3>Buttons</h3>
 
       <div class="flex" style="align-items: flex-start;margin-bottom: 8px;">
-        <Button text="Button" noBorder />
-        <Button
-          text="Button"
-          href="https://nethruster.com"
-          hrefBlank
-          noBorder
-        />
-        <Button text="Button" icon="eye" noBorder />
-        <Button text="Button" icon="eye" iconButton noBorder />
-      </div>
-
-      <div class="flex" style="align-items: flex-start;margin-bottom: 8px;">
         <Button text="Button" />
         <Button text="Button" href="https://nethruster.com" hrefBlank />
         <Button text="Button" icon="eye" />

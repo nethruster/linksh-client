@@ -7,9 +7,6 @@
         left: 0px;
         right: 0px;
         top: 0;
-        :local {
-            animation: fade-in both 250ms ease;
-        }
     }
 
     .modal-wrapper {
@@ -31,8 +28,6 @@
         width: 512px;
         max-width: calc(100% - 16px);
         position: absolute;
-        left: 0px;
-        right: 0px;
         height: -webkit-fit-content;
         margin: auto 8px;
         background: white;
@@ -49,4 +44,22 @@
     .modal-title { margin-bottom: 8px; }
 
     .modal-actions { justify-content: flex-end; }
+
+    .example-enter {
+        opacity: 0.01;
+      }
+      
+      .example-enter.example-enter-active {
+        opacity: 1;
+        transition: opacity 500ms ease-in;
+      }
+      
+      .example-leave {
+        opacity: 1;
+      }
+      
+      .example-leave.example-leave-active {
+        opacity: 0.01;
+        transition: opacity 300ms ease-in;
+      }
 }

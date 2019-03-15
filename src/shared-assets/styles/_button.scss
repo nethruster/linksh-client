@@ -9,12 +9,12 @@
         display: inline-block;
         height: var(--button-height);
         padding: 0 calc(var(--base-pm) * 4);
-        border: .1rem solid var(--color-quaternary);
+        border: none;
         border-radius: var(--base-br);
         color: var(--color-accent);
         font-size: 1.3rem;
         font-weight: 600;
-        line-height: var(--button-height);
+        line-height: calc(var(--button-height) - 1px);
         text-align: center;
         text-decoration: none;
         white-space: nowrap;
@@ -30,7 +30,6 @@
         &:focus,
         &:hover {
             background-color: var(--color-tertiary);
-            border-color: var(--color-quaternary);
         }
 
         &[disabled] {
@@ -40,7 +39,6 @@
             &:focus,
             &:hover {
                 background-color: transparent;
-                border-color: var(--color-quinary);
             }
         }
 
@@ -58,13 +56,10 @@
             }
         }
 
-        &[noBorder] { border: none; }
-
         &.icon-button {
             border-radius: 100%;
             padding: 0 8px;
             svg {
-                margin-top: -5px;
                 vertical-align: middle;
             }
         }

@@ -2,6 +2,7 @@ import { h, Component } from 'preact'
 import { connect } from 'unistore/preact'
 import Portal from 'preact-portal'
 import { bind } from 'decko'
+import CSSTransitionGroup from 'preact-transition-group'
 
 import { actions } from 'store'
 
@@ -23,8 +24,9 @@ export default connect(
       return (
         modal.state && (
           <Portal into={into}>
+            {/* Transition wrapper would go here */}
             <div
-              class="modal-wrapper"
+              class="flex flex-full-center modal-wrapper"
               style={{ top: Math.round(window.pageYOffset) }}
             >
               <div class="modal-overlay" onClick={this.toggleModalHandler} />
